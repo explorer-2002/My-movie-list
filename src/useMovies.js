@@ -16,7 +16,7 @@ export function useMovies(query,handleCloseMovie){
          setIsLoading(true)
          setError('')
    
-         const res = await fetch(`http://www.omdbapi.com/?apikey=703af998&s=${query}`,{signal:controller.signal})
+         const res = await fetch(`https://www.omdbapi.com/?apikey=703af998&s=${query}`,{signal:controller.signal})
    
          if(!res.ok)
            throw new Error("Can't fetch movies");
